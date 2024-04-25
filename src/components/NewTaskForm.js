@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const NewTaskForm = ({ categories, onAddTask }) => {
+const NewTaskForm = ({ categories, onTaskFormSubmit }) => {
   const [taskText, setTaskText] = useState(""); // State for task text input
   const [taskCategory, setTaskCategory] = useState(categories[0]); // State for task category select
 
@@ -16,7 +16,7 @@ const NewTaskForm = ({ categories, onAddTask }) => {
     e.preventDefault(); // Prevent default form submission behavior
     if (taskText.trim() !== "") {
       // Check if task text is not empty
-      onAddTask({ text: taskText, category: taskCategory }); // Call onAddTask function with new task object
+      onTaskFormSubmit({ text: taskText, category: taskCategory }); // Call onTaskFormSubmit function with new task object
       setTaskText(""); // Clear task text input
       setTaskCategory(categories[0]); // Reset task category to the first category
     }

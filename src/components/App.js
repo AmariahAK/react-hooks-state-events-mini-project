@@ -38,7 +38,7 @@ function App() {
       />
       <NewTaskForm
         categories={CATEGORIES} // Pass categories for the new task form
-        onAddTask={handleAddTask}
+        onTaskFormSubmit={handleAddTask} // Update prop name to match the callback function
       />
       <TaskList
         tasks={filteredTasks} // Pass filtered tasks to TaskList
