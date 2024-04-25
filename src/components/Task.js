@@ -1,10 +1,10 @@
 import React from "react";
 
 const Task = ({ task, onDelete }) => {
-  const { text, category } = task;
+  const { id, text, category } = task;
 
   const handleDeleteClick = () => {
-    onDelete(); // Call onDelete function passed as prop to delete the task
+    onDelete(id); // Call onDelete function passed as prop to delete the task
   };
 
   return (
